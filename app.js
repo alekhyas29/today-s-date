@@ -2,5 +2,6 @@ const express = require("express");
 const app = express();
 module.exports = app;
 app.get("/", (request, response) => {
-  response.send("7-10-2021");
+  let date=new Date();
+  response.send(`${date.getDate()}-${date.getMonth()+1}-${date.getFullYear()}`)
 });
